@@ -8,6 +8,12 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)
+
+
+@app.route('/', methods = ["GET"]) 
+def getPage():
+    return "Google Image Search"
+
 # url = http://127.0.0.1:80/searchImages
 @app.route('/searchImages', methods = ["POST"]) 
 def searchImages():
